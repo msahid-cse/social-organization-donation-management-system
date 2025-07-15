@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donation Dashboard</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="light-mode">
+  <header>
+    <h2>💰 Chanda & Expense Dashboard</h2>
+    <button id="logoutBtn">Logout</button>
+    <button id="toggleMode">🌙 Dark Mode</button>
+  </header>
+
+  <main class="container">
+    <!-- Add Donation Form -->
+    <section class="form-section">
+      <h3>➕ Add Chanda (Donation)</h3>
+      <form id="donationForm">
+        <input type="text" id="donorName" placeholder="Donor Name" required />
+        <input type="number" id="donationAmount" placeholder="Amount" required />
+        <input type="month" id="donationMonth" required />
+        <button type="submit">Add Donation</button>
+      </form>
+    </section>
+
+    <!-- Add Expense Form -->
+    <section class="form-section">
+      <h3>➖ Add Expense</h3>
+      <form id="expenseForm">
+        <input type="text" id="expenseReason" placeholder="Reason" required />
+        <input type="number" id="expenseAmount" placeholder="Amount" required />
+        <input type="month" id="expenseMonth" required />
+        <button type="submit">Add Expense</button>
+      </form>
+    </section>
+
+    <!-- Filters -->
+    <section class="filter-section">
+      <h3>🔍 Filter</h3>
+      <input type="month" id="filterMonth" />
+      <button id="filterBtn">View Summary</button>
+      <button id="downloadPdfBtn">Download PDF</button>
+    </section>
+
+    <!-- Summary Display -->
+    <section id="summarySection">
+      <h3>📊 Monthly Summary</h3>
+      <table id="summaryTable">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Name/Reason</th>
+            <th>Amount</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div id="summaryFooter">
+        <p>Total Collection: <span id="totalCollection">৳0</span></p>
+        <p>Total Expense: <span id="totalExpense">৳0</span></p>
+        <p>Current Cash: <span id="currentCash">৳0</span></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
