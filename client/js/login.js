@@ -18,7 +18,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   // Later this will be validated via server
   if (username === "admin" && password === "admin") {
     alert("Login successful");
-    window.location.href = "dashboard.html";
+    window.location.href = "../dashboard.html"; // Redirect to dashboard
   } else {
     alert("Invalid credentials");
   }
